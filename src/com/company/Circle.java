@@ -1,9 +1,7 @@
 package com.company;
 
-/**
- * Created by jv on 17/04/2016.
- */
-public class Circle extends Shape {
+
+public class Circle extends Shape implements Inter {
 
     protected  int x,y,r;
 
@@ -18,5 +16,32 @@ public class Circle extends Shape {
 
     public void draw(){
         System.out.println("Drawing circle");
+    }
+
+    @Override
+    public void moveRight() {
+      y=-1;
+    }
+
+    @Override
+    public void moveLeft() {
+        x=-1;
+
+    }
+
+    @Override
+    public void moveUp() {
+x+=1;
+    }
+
+    @Override
+    public void moveDown() {
+y+=1;
+    }
+
+    @Override
+    public void moveToDefaultPosition() {
+x=defaultX;
+        y=defaultY;
     }
 }
